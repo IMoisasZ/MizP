@@ -5,23 +5,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MizP</title>
-    <!-- Fonts -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
-    <!-- Css -->
-    <link rel="stylesheet" href="../css/style.css">
     <!-- Javascript -->
-    <script src="../js/scripts.js"></script>
-
+    <script defer src="/js/script.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="row">
+            <form class="d-flex mt-2 mb-2">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar produtos" aria-label="Search">
+                <button class="btn btn-outline-success" value="1" id="tt" type="submit">Pesquisar</button>
+            </form>
+        </div>
+        <div class="row d-flex">
+            <nav class="d-flex">
+                <div class="col-xl-4 d-flex">
+                    <ul class="d-flex">
+                        <div class="mt-1">
+                            <img src="/img/mipz.png" class="m-0" width="120px" height="auto" alt="MizP - O seu ecommerce" title="MIZP - O seu ecommerce">
+                        </div> 
+                        <div class="mt-4 d-flex">
+                            <li><a class="navLink ms-3" href="#">Mais vendidos</a></li>
+                            <li><a class="navLink ms-4" href="#">Lançamentos</a></li>
+                        </div>   
+                    </ul>
+                </div>
+                <div class="col-8-xl p-0">
+                    <div class="d-flex" id="categorias">
+                        <div class="">
+                            <button class="btn" id="tecnologia" title="Tecnologia"><i class="bi bi-gear-wide-connected fs-1 estilo"></i></button>
+                            <button class="btn" id="casa" title="Casa"><i class="bi bi-house-door fs-1 estilo"></i></button>
+                            <button class="btn" id="ferramentas" title="Ferramentas"><i class="bi bi-wrench fs-1 estilo"></i></button>
+                            <button class="btn" id="moda" title="Moda"><i class="bi bi-person-check fs-1 estilo"></i></button>
+                            <button class="btn" id="produtos_beleza" title="Produtos de Beleza"><i class="bi bi-brush fs-1 estilo"></i></button>
+                            <button class="btn" id="brinquedos" title="Brinquegos"><i class="bi bi-star fs-1 estilo"></i></button>
+                        </div>
+
+                            <input type="text" id="text" class="text-start ms-4 fs-3"/>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+            <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <img src="/img/mipz.png" width="100px" alt="MizP - O seu ecommerce" title="MIZP - O seu ecommerce"><a class="navbar-brand" href="#"></a>
+                  <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Mais vendidos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Lançamentos</a>
+                      </li>
+                      <div class="row bg-dark d-flex text-center" id="categorias">
+                          <div class="align-middle">
+                              <button class="btn btn-dark" id="tecnologia" title="Tecnologia"><i class="bi bi-gear-wide-connected fs-1 estilo"></i></button>
+                              <button class="btn btn-dark" id="casa" title="Casa"><i class="bi bi-house-door fs-1 estilo"></i></button>
+                              <button class="btn btn-dark" id="ferramentas" title="Ferramentas"><i class="bi bi-wrench fs-1 estilo"></i></button>
+                              <button class="btn btn-dark" id="moda" title="Moda"><i class="bi bi-person-check fs-1 estilo"></i></button>
+                              <button class="btn btn-dark" id="produtos_beleza" title="Produtos de Beleza"><i class="bi bi-brush fs-1 estilo"></i></button>
+                              <button class="btn btn-dark" id="brinquedos" title="Brinquegos"><i class="bi bi-star fs-1 estilo"></i></button>
+                          </div>
+                          <div class="row mt-1 mb-1">
+                              <div class="col-xl-12">
+                                  <input type="text" id="text" class="fs-3"/>
+                              </div>
+                          </div>
+                      </div>
+                    
+                    </ul>
+                    <form class="d-flex mt-2 mb-2"></form>
+                        <button class="btn btn-outline-success" type="submit">Login/Logon</button>
+                    </form>
+                    </div>
+                </div> -->
+            
+        </div>
+        
+    </nav>
+    </header>
+
+    <!-- carrossel -->
+    <div class="container-fluid mt-4" style="height: 600px;">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <!-- seciotn categorias -->
+    <div class="container-fluid mt-4">
+        <section id="section-categoria">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

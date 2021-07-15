@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    font-family: 'Roboto','Courier New', Courier, monospace;
+}
+
+.list:hover{
+    background-color: chartreuse;
+}
+
+.estilo{
+    color: #6c757d;
+}
+
+.estilo:hover{
+    color: chartreuse;
+    transition: 1s;
+
+}
+
+input{
+    background-color: transparent;
+    font-weight: 700;
+    border: transparent;
+    text-align: center;
+    color: chartreuse;
+}
+
+.navLink{
+    color: #6c757d;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.navLink:hover{
+    color: chartreuse;
+    transition: 1s;
+}
