@@ -36,3 +36,58 @@ input{
     color: chartreuse;
     transition: 1s;
 }
+
+.carouselExampleCaptions{
+    height: 200px;
+}
+
+
+.conferir{
+    background-color: rgb(245, 241, 241);
+}
+
+.conferir:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+li{
+    list-style-type: none;
+}
+
+#pesquisar{
+    background-color: white;
+    border: 2px solid chartreuse;
+    width: 100%;
+    margin-left: 10px;
+    border-radius: 10px;
+    height: 2rem;
+    color: black;
+    transition: 2s;
+}
+
+.pesquisaOn{
+    background-color: transparent;
+    color:chartreuse;
+    border: 2px solid chartreuse;
+    transition: 2s;
+}
+
+.pesquisa_off{
+    background-color: white;
+    border: 2px solid chartreuse;
+    width: 100%;
+    margin-left: 10px;
+    border-radius: 10px;
+    height: 2rem;
+    color: black;
+}
+
+#btn_pesquisar{
+    border: 2px solid chartreuse;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+

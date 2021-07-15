@@ -98,17 +98,7 @@ document.getElementById('brinquedos').addEventListener('mouseout',function(){
     textoCategoria.value = ""
 })
 
-// produos e categorias
-
-
-// "<div class="row">
-//     <div class="col-xl-3">
-//         <div class="card">
-//             <div class="card-body">
-//                 <h5 class="card-title">Special title treatment</h5>
-//                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-//                 <a href="#" class="btn btn-primary">Go somewhere</a>
-//             </div>
-//         </div>
-//     </div>
-// </div>"
+let inputPesquisa = document.getElementById('pesquisar')
+inputPesquisa.addEventListener('focus', function(){
+    inputPesquisa.classList.add('pesquisaOn')
+})
