@@ -1,6 +1,74 @@
+/* padrao */
+*{
+    font-family: 'Roboto','Courier New', Courier, monospace;
+}
+
+hr{
+    color: blanchedalmond;
+    margin: 5% 0% 0% 0%;
+}
+
 body{
     background-color: black;
-    font-family: 'Roboto','Courier New', Courier, monospace;
+    /* font-family: 'Roboto','Courier New', Courier, monospace; */
+}
+
+/* login */
+.btn-login{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.icon-login{
+    color: white;
+}
+
+.icon-login:hover{
+    color:chartreuse;
+    transition: 1.5s;
+}
+
+.nao-cadastrado{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: chartreuse;
+}
+
+#modal-content-login{
+    background-color: black;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+}
+
+#modal-title-login{
+    color: white;
+}
+
+#modal-content-confirmacao-login{
+    background-color: black;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+}
+
+/* btn top */
+.btn-top{
+    position:fixed;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    font-size: 2rem;
+    margin-left: 61%;
+}
+
+.top:hover{
+    color: chartreuse;
+    transition: 2s;
+}
+
+/* header */
+li{
+    list-style-type: none;
 }
 
 .list:hover{
@@ -37,27 +105,8 @@ input{
     transition: 1s;
 }
 
-.navRow,
 nav{
     height: 60px;
-}
-
-.carouselExampleCaptions{
-    height: 200px;
-}
-
-.conferir{
-    background-color: rgb(245, 241, 241);
-}
-
-.conferir:hover{
-    background-color: black;
-    color: white;
-    transition: 1s;
-}
-
-li{
-    list-style-type: none;
 }
 
 .inputPesquisar{
@@ -79,6 +128,25 @@ li{
     color: chartreuse;
 }
 
+#text{
+    width: 290px;
+}
+
+/* carrossel */
+.carouselExampleCaptions{
+    height: 200px;
+}
+
+.conferir{
+    background-color: rgb(245, 241, 241);
+}
+
+.conferir:hover{
+    background-color: black;
+    color: chartreuse;
+    transition: 1s;
+}
+
 .black-friday{
     background-color: black;
     color: chartreuse;
@@ -86,13 +154,161 @@ li{
     margin: -12.4% 0% 0% 12%;
 }
 
-.smart-whatches{
-    color: chartreuse;
+/* mais vendidos */
+#mais-vendidos{
+    margin: 2%;
+    padding: 1%;
+    color: #6c757d;
+    width: 30%;
+}
+
+#mais-vendidos:hover{
+    background-color: transparent;
+    border: 2px solid chartreuse ;
+    border-radius: 10px;
+    transition: 1s;
 }
 
 .section-mais-vendidos{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1170px;
+    padding: 1.5rem auto;
+    margin: 1% 2%;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.section-mais-vendidos-card{
+    background-color: white;
+    width: 31%;
+    height: 400px;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    text-align: center;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+}
+
 .imagem{
-    width: 200px;
+    width: 180px;
+    filter: grayscale(100%);
+}
+
+.imagem:hover{
+    width: 180px;
+    filter: grayscale(0%);
+    transition: 1s;
+}
+
+.icon-carrinho-0,
+.icon-carrinho-1,
+.icon-carrinho-2,
+.icon-carrinho-3,
+.icon-carrinho-4,
+.icon-carrinho-5{
+    border: 2px transparent chartreuse;
+    filter: grayscale(100%);
+}
+
+.div-btn-carrinho-0,
+.div-btn-carrinho-1,
+.div-btn-carrinho-2{
+    position: absolute;
+    top: 131%;
+}
+
+.div-btn-carrinho-3,
+.div-btn-carrinho-4,
+.div-btn-carrinho-5{
+    position: absolute;
+    top: 180%;
+}
+
+.icon-carrinho:hover{
+    border: 2px transparent chartreuse;
+    color:chartreuse;
+    filter: grayscale(0%);
+    transition: 1s;
+}
+
+/* lançamentos */
+#lancamentos{
+    margin: 2%;
+    padding: 1%;
+    color: #6c757d;
+    width: 30%;
+}
+
+#lancamentos:hover{
+    background-color: transparent;
+    border: 2px solid chartreuse ;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.section-lancamentos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1170px;
+    padding: 1.5rem auto;
+    margin: 1% 2%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-lancamentos-card{
+    background-color: white;
+    width: 31%;
+    height: 400px;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    text-align: center;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+}
+
+.imagem-lancamentos{
+    width: 180px;
+    filter: grayscale(100%);
+}
+
+.imagem-lancamentos:hover{
+    width: 180px;
+    filter: grayscale(0%);
+    transition: 2s;
+}
+
+.icon-carrinho-lancamentos-0,
+.icon-carrinho-lancamentos-1,
+.icon-carrinho-lancamentos-2,
+.icon-carrinho-lancamentos-3,
+.icon-carrinho-lancamentos-4,
+.icon-carrinho-lancamentos-5{
+    border: 2px transparent chartreuse;
+    filter: grayscale(100%);
+}
+
+.div-btn-carrinho-lancamentos-0,
+.div-btn-carrinho-lancamentos-1,
+.div-btn-carrinho-lancamentos-2{
+    position: absolute;
+    top: 246%;
+}
+
+.icon-carrinho:hover{
+    border: 2px transparent chartreuse;
+    color:chartreuse;
+    filter: grayscale(0%);
+    transition: 1s;
 }

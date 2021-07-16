@@ -13,14 +13,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <!-- Javascript -->
     <script defer src="/js/script.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <header class="container-fluid">
-      <div class="row">
+    <header class="container-fluid" id="menu">
+      <div class="row d-flex">
         <div class="col-xl-4">
           <ul class="d-flex">
             <div class="mt-1">
@@ -28,28 +32,83 @@
             </div> 
             <div class="mt-4 d-flex">
               <li><a class="navLink ms-3" href="#mais-vendidos">Mais vendidos</a></li>
-              <li><a class="navLink ms-4" href="#">Lançamentos</a></li>
+              <li><a class="navLink ms-4" href="#lancamentos">Lançamentos</a></li>
             </div>   
           </ul>
         </div>
-        <div class="col-xl-8 p-0 d-flex">
+        <div class="col-xl-6 p-0 d-flex">
           <button class="btn pb-0"><i id="tecnologia" class="bi bi-gear-wide-connected fs-1 estilo" title="Tecnologia"></i></button>
           <button class="btn pb-0"><i id="casa" class="bi bi-house-door fs-1 estilo" title="Casa"></i></button>
           <button class="btn pb-0"><i id="ferramentas" class="bi bi-wrench fs-1 estilo" title="Ferramentas"></i></button>
           <button class="btn pb-0"><i id="moda" class="bi bi-person-check fs-1 estilo" title="Moda"></i></button>
           <button class="btn pb-0"><i id="produtos_beleza" class="bi bi-brush fs-1 estilo" title="Produtos de Beleza"></i></button>
           <button class="btn pb-0"><i id="brinquedos" class="bi bi-star fs-1 estilo" title="Brinquegos"></i></button>
-          <input type="text" id="text" class="text-start ms-4 fs-3"/>
-        </div>          
+          <input type="text" id="text" class="text-start ms-4 fs-3 input-descricao"/>
+          <button type="button" class="btn-login" data-bs-toggle="modal" data-bs-target="#login"><i class="bi bi-person-circle fs-1 icon-login"></i></button>
+
+          <!-- Modal login -->
+          <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" id="modal-content-login">
+                <div class="modal-header" id="modal-header-login">
+                  <h5 class="modal-title" id="modal-title-login">Login/Logout</h5>
+                </div>
+                <form action="#" method="GET">
+                  <div class="modal-body">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="email" placeholder="usuario">
+                      <label for="floatingInput">Usuário cadastrado (email)<span class="text-danger"></span> *</label>
+                    </div>
+                    <div class="form-floating">
+                      <input type="password" class="form-control" id="senha" placeholder="Senha">
+                      <label for="floatingPassword">Digite a senha</label>
+                    </div>
+                    <p class="text-end mt-2 mb-0 nao-cadastrado">Não é cadastrado? Clique <a href="">aqui</a> e cadastre-se!</p>
+                    <div class="modal-footer" id="modal-footer-login">
+                      <button type='submit' class='btn btn-secondary' data-bs-dismiss='modal' id='cancelar'>Cancelar</button>
+                      <button type='submit' class='btn btn-primary btnLogin' id='btnLogin' data-bs-toggle='modal' data-bs-target='#login-confirmacao'>Login</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- modal confirmação login -->
+          <div class="modal fade" id="login-confirmacao" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" id="modal-content-confirmacao-login">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body-confirmacao-login">
+                
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
       
       <!-- pesquisa -->
       <div class="row d-flex mt-2">
-        <div class="col-xl-7">
+        <div class="col-xl-6">
           <input type="text" class="inputPesquisar" placeholder="Pesquisar produtos" />
         </div>
         <div class="col-xl-2">
           <button class="btnPesquisar">Pesquisar</button>
+        </div>
+        <div class="col-xl-2">
+          <a href="#" class="m-0">Conheça a <strong>MizP</strong></a>
+        </div>
+        <div class="col-xl-2">
+          <input type="text" class="nome-login" value="">
         </div>
       </div>
     </header>
@@ -97,14 +156,27 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- section mais vendidos -->
-      <h3 id="mais-vendidos">Os produtos mais vendidos</h3>
-      <section>
-        <div class="row section-mais-vendidos">
-
-
-        </div>
-      </section>
     </div>
+
+    <hr>
+
+    <!-- section mais vendidos -->
+    <section>
+      <div class="row d-flex">
+        <div class="col-xl-12 d-flex">
+          <h3 id="mais-vendidos" class="mt-1">Os produtos mais vendidos</h3>
+          <a href="#menu"><button class="btn-top align-middle"><i class="bi bi-arrow-up-circle-fill top"></i></button></a>
+        </div>
+      </div>
+        <div class="row section-mais-vendidos"></div>
+    </section>
+
+    <hr>
+    <!-- section lançamentos -->
+    <section>
+    <h3 id="lancamentos" class="mt-1">Lançamentos</h3>
+      <div class="row section-lancamentos"></div>
+    </section>
+    
   </body>
   </html>
