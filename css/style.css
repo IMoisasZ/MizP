@@ -37,10 +37,14 @@ input{
     transition: 1s;
 }
 
+.navRow,
+nav{
+    height: 60px;
+}
+
 .carouselExampleCaptions{
     height: 200px;
 }
-
 
 .conferir{
     background-color: rgb(245, 241, 241);
@@ -56,38 +60,39 @@ li{
     list-style-type: none;
 }
 
-#pesquisar{
-    background-color: white;
-    border: 2px solid chartreuse;
-    width: 100%;
-    margin-left: 10px;
-    border-radius: 10px;
-    height: 2rem;
-    color: black;
-    transition: 2s;
-}
-
-.pesquisaOn{
+.inputPesquisar{
     background-color: transparent;
-    color:chartreuse;
-    border: 2px solid chartreuse;
-    transition: 2s;
-}
-
-.pesquisa_off{
-    background-color: white;
     border: 2px solid chartreuse;
     width: 100%;
     margin-left: 10px;
     border-radius: 10px;
     height: 2rem;
-    color: black;
+    color: chartreuse;
 }
 
-#btn_pesquisar{
+.btnPesquisar{
+    background-color: transparent;
     border: 2px solid chartreuse;
+    border-radius: 10px;
     height: 2rem;
     padding: 0 0.5rem;
+    color: chartreuse;
 }
 
+.black-friday{
+    background-color: black;
+    color: chartreuse;
+    width: 77%;
+    margin: -12.4% 0% 0% 12%;
+}
 
+.smart-whatches{
+    color: chartreuse;
+}
+
+.section-mais-vendidos{
+    display: flex;
+}
+.imagem{
+    width: 200px;
+}

@@ -1,58 +1,3 @@
-let categorias = [
-    {id: 0, nome: "Tecnologia", 
-        produtos:{
-            id: 0, nomeProduto: "Noteboks", icon: "<i class='bi bi-laptop'></i>",
-            id: 1, nomeProduto: "Celulares", icon: "<i class='bi bi-phone'></i>",
-            id: 2, nomeProduto: "Tablets", icon: "<i class='bi bi-tablet'></i>",
-            id: 3, nomeProduto: "SmartWatches", icon:"<i class='bi bi-smartwatch'></i>"
-        }
-    },
-
-    {id:1, nome:"Casa", 
-        produtos:{
-            id: 4, nomeProduto: "Camas",
-            id: 5, nomeProduto: "Sofas",
-            id: 6, nomeProduto: "Mesas",
-            id: 7, nomeProduto: "Cadeiras",
-        }
-    },
-
-    {id:2, nome: "Ferramentas", 
-        produtos: {
-            id: 8, nomeProduto: "Martelos",
-            id: 9, nomeProduto: "Furadeiras",
-            id: 10, nomeProduto: "Alicates",
-            id: 11, nomeProduto: "Serrote",
-        }
-    },
-
-    {id:3, nome: "Moda", 
-        produtos: {
-            id: 12, nomeProduto: "Masculina",
-            id: 13, nomeProduto: "Feminina",
-            id: 14, nomeProduto: "Meninos",
-            id: 15, nomeProduto: "Meninas",
-        }
-    },
-
-    {id:4, nome: "Produtos de Beleza",
-        produtos: {
-            id: 16, nomeProduto: "Perfumes Masculinos",
-            id: 17, nomeProduto: "Perfumes Femininos",
-            id: 18, nomeProduto: "Manicure e Pedicure",
-            id: 19, nomeProduto: "Cuidados com o Cabelo",
-        }
-    },
-
-    {id:5, nome: "Brinquedos",
-        produtos: {
-            id: 16, nomeProduto: "0 a 24 Meses",
-            id: 17, nomeProduto: "2 a 4 Anos",
-            id: 18, nomeProduto: "5  a 7 Anos",
-            id: 19, nomeProduto: "8 Anos ou mais",
-        }
-    }
-]
 
 let textoCategoria = document.getElementById('text')
 document.getElementById('tecnologia').addEventListener('mouseover',function(){
@@ -98,7 +43,24 @@ document.getElementById('brinquedos').addEventListener('mouseout',function(){
     textoCategoria.value = ""
 })
 
-let inputPesquisa = document.getElementById('pesquisar')
-inputPesquisa.addEventListener('focus', function(){
-    inputPesquisa.classList.add('pesquisaOn')
+let maisVendidos = [
+    {id: 0, categoria: "Notebook", descricao: "Notebook Acer Nitro Gamer AN515-55-59MT Intel Core I5 16GB 512GB SSD 15.6' Windows 10", fabricante: "accer", imagem: '/img/tecnologia/noteboks/notebook_acer.jpg'},
+    {id: 1, categoria: "Notebook", descricao: "Notebook HP 256 G8 Intel Core i3 8GB 256GB SSD - 15,6&quot; LCD Windows 10", fabricante: "hp", imagem: '/img/tecnologia/noteboks/notebook_hp_.jpg'},
+    {id: 2, categoria: "Celular", descricao: "Xiaomi Redmi Note 10 4GB+64GB Versão global Onyx Gray", fabricante: "xiaomi", imagem: '/img/tecnologia/celulares/xaomi_note_10.jpg'},
+    {id: 3, categoria: "Celular", descricao: "Celular Smartphone K22+ 64GB 6,2 LG - Vermelho", fabricante: "lg", imagem: '/img/tecnologia/celulares/celular-smartphone-k22-64gb-6-2-lg_397369.jpg'},
+    {id: 4, categoria: "Celular", descricao: "Relógio Amazfit GTS A1914 - Preto", fabricante: "amazfit", imagem: '/img/tecnologia/smart_whatches/smart_whatch_amazfit_bip_u+pro.jpg'},
+    {id: 5, categoria: "Celular", descricao: "Galaxy Watch Active2 Preto", fabricante: "sansumg", imagem: '../img/tecnologia/smart_whatches/5187V2FMXML._AC_SL1000_.jpg'},
+]
+
+maisVendidos.forEach(produto =>{
+    document.querySelector('.section-mais-vendidos').innerHTML +=`
+            <div class="card">
+                <h5 class="card-title">${produto.categoria}</h5>
+                <img src=${produto.imagem} class='imagem'/>
+                <p class="card-text">${produto.descricao}</p>
+                <div>
+                    <a href="#" class="btn btn-primary comprar">Comprar</a>
+                </div>
+            </div>
+    `  
 })
