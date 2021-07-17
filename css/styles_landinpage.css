@@ -20,9 +20,10 @@ main{
     background-color: black;
     border: 2px solid chartreuse;
     border-radius: 10px;
-    padding: 4%;
+    padding: 2%;
+    width: 60%;
+    margin: 0% 20%;
 }
-
 
 .texto{
     border: 2px solid chartreuse;
@@ -32,18 +33,14 @@ main{
     border-radius: 10px;
 }
 
-.container-fluid{
-    border: 2px solid chartreuse;
-    border-radius: 10px;
-    margin: 2% 0% 2% 0%;
-    padding: 2%;
+#msg{
+    width: 100%;
+    color: chartreuse;
+    text-align: justify;
 }
 
-#msg{
-    width: 30%;
-    margin-top: 100px;
-    color: white;
-    text-align: justify;
+.aqui{
+    color: chartreuse;
 }
 
 .btn-site{
@@ -56,4 +53,15 @@ main{
 
 .nao-cadastro{
     color: white;
+    padding: 0;
+    margin: 0px;
+}
+
+#logo{
+    width: 300px;
+    height: auto;
+}
+
+#form{
+    margin-left: 10%;
 }
