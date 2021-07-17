@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    background-color: black;
+}
+
+/* formulario */
+#gravar{
+    background-color: transparent;
+    color: chartreuse;
+    border: 2px solid chartreuse;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.card{
+    background-color: black;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+    padding: 4%;
+}
+
+
+.texto{
+    border: 2px solid chartreuse;
+    color: white;
+    text-align: justify;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.container-fluid{
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+    margin: 2% 0% 2% 0%;
+    padding: 2%;
+}
+
+#msg{
+    width: 30%;
+    margin-top: 100px;
+    color: white;
+    text-align: justify;
+}
+
+.btn-site{
+    background-color: transparent;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+    color: chartreuse;
+    padding: 2%;
+}
+
+.nao-cadastro{
+    color: white;
+}

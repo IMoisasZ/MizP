@@ -69,7 +69,7 @@ maisVendidos.forEach(produto =>{
                 <p class="preco">${produto.preco}</p>
             </div>
             <div class="div-btn-carrinho-${produto.id}">
-                <a href="#"><i class="bi bi-cart4 fs-1 icon-carrinho icon-carrinho-${produto.id}" title:"Adicionar a cesta!"></i></a>
+                <a href="#" onclick="incluirItensCesta()"><i class="bi bi-cart4 fs-1 icon-carrinho icon-carrinho-${produto.id}" title:"Adicionar a cesta!"></i></a>
             </div>
         </div>
     `  
@@ -95,47 +95,117 @@ lancamentos.forEach(produto =>{
         <p class="preco">${produto.preco}</p>
     </div>
     <div class="div-btn-carrinho-lancamentos-${produto.id}">
-        <a href="#"><i class="bi bi-cart4 fs-1 icon-carrinho icon-carrinho-lancamentos-${produto.id}" title:"Adicionar a cesta!"></i></a>
+        <a href="#" onclick="incluirItensCesta()"><i class="bi bi-cart4 fs-1 icon-carrinho icon-carrinho-lancamentos-${produto.id}" title:"Adicionar a cesta!"></i></a>
     </div>
 </div>
     `  
 })
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>login<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-let login = document.querySelector('.btn-login')
-let nomeLogin = document.querySelector('.nome-login')
-let footerBtns = document.querySelector('#modal-footer-login')
-login.addEventListener('click',function(){
-    if(nomeLogin.value !== ""){
-         footerBtns.innerHTML = "<button type='submit' class='btn btn-secondary'data-bs-dismiss='modal'>Cancelar</button><button type='submit' class='btn btn-primary btnLogout' id='btnLogout'>Logout</button>"
+    let login = document.getElementById('.btn-login')
+    let sectionLogin = document.getElementById('section-login')
+
+    function secLogin(){
+        document.querySelector('.login-form').style.display = 'inline-block'
     }
-})
+    let email = document.getElementById('email-user')
 
-let dadosUsuario = [
-    {nome:"Moises", email:"mopri08@gmail.com", senha:"123456"}
-]
+    let senha = document.getElementById('senha-user')
 
-let btnLoginFooter = document.getElementById('btnLogin')
-let email = document.getElementById('#email')
-let e = email.value //e = email
-let senha = document.querySelector('#senha')
-let s = senha.value //s = senha
-let confirmarSenha = document.querySelector('#confirmar-senha')
-let bodyConfirmacaoLogin = document.getElementById('modal-body-confirmacao-login')
+    let erroLogin = document.querySelector('.erro-login')
 
-btnLoginFooter.addEventListener('click', function(){
-    bodyConfirmacaoLogin.innerHTML = '<p>OXIIIIIIIIIIIIIII</p>'
-    // dadosUsuario.forEach(u =>{
-    //     if(e === u.email){
-    //         if(s === u.senha){
-    //             bodyConfirmacaoLogin.innerHTML = `Bem vindo, ${u.nome}`
-    //             nomeLogin.value = "Olá, ${u.nome}"
-    //         }else{
-    //             bodyConfirmacaoLogin.innerHTML = `Usuário não cadastrado ou senha incorreta!`
-    //         }
-    //     }
-    // })
-})
+    let nomeLogin = document.querySelector('.nome-login')
 
+    let dadosUsuario = [
+        {nome:"Moises", email:"mopri08@gmail.com", senha:"123456"}
+    ]
 
+    function verificarDadosLogin (){
+        dadosUsuario.forEach(user =>{
+            if(email.value === user.email){
+                if(senha.value !== user.senha){
+                    alert("Usuário não cadastrado ou senha inválida!")
+                    document.querySelector('.login-form').style.display = 'none'
+                }else{
+                    alert("Olá "+user.nome)
+                    nomeLogin.value = "Olá, "+user.nome
+                    document.querySelector('.login-form').style.display = 'none'
+                }
+            }else{
+                alert("Usuário não cadastrado ou senha inválida!")
+                document.querySelector('.login-form').style.display = 'none'
+            }
+        })
+    }
 
+    function logOut(){
+        if(nomeLogin.value !== ""){
+            alert("Até a próxima "+nomeLogin.value.replace('Olá, ',''))
+            nomeLogin.value = ""
+            email.value = ""
+            senha.value = ""
+            document.querySelector('.login-form').style.display = 'none'
+        }
+    }
+
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add itens na cesta<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    let contadorCesta = document.querySelector('.input-cesta')
+    function incluirItensCesta(){
+        if(nomeLogin.value === "" ){
+            alert("Você tem que estar logado para incluir itens a cesta!")
+        }else{
+            contadorCesta.value = Number(contadorCesta.value) + Number(1)
+        }
+    }
+
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>cadastro usuario<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    let nomeUsuario = document.getElementById('nome-user-cadastro')
+    let emailUsuario = document.getElementById('email-user-cadastro')
+    let emailUsuarioConfirmar = document.getElementById('confirmar-email-user-cadastro')
+    let senhaUsuario = document.getElementById('senha-user-cadastro')
+    let senhaUsuarioConfirmar = document.getElementById('confirmar-senha-user-cadastro')
+    let btnCastrarUsuario = document.getElementById('btn-incluir')
+    let btnCancelarCadastro = document.getElementById('btn-cancelar-inclusao')
+
+    function incluirUsuario(){
+        if(emailUsuario.value !== emailUsuarioConfirmar.value){
+            emailUsuario.focus()
+            emailUsuario.style.borderColor = 'rgb(255,0,0)'
+            emailUsuarioConfirmar.style.borderColor = 'rgb(255,0,0)'
+            alert("Os emails são diferentes")
+
+        }else if(senhaUsuario.value !== senhaUsuarioConfirmar.value){
+            senhaUsuario.focus()
+            senhaUsuario.style.borderColor = 'rgb(255,0,0)'
+            senhaUsuarioConfirmar.style.borderColor = 'rgb(255,0,0)'
+            alert("As senhas são diferentes")
+        }else{
+            dadosUsuario.push({
+                nome: nomeUsuario.value,
+                email: emailUsuario.value,
+                senha: senhaUsuario.value
+            })
+            alert("O usuário "+nomeUsuario.value+ " foi cadastrado com sucesso!")
+            limparCampos()
+            
+        }
+    }
+
+    function limparCampos(){
+        nomeUsuario.value = ""
+        emailUsuario.style.borderColor = 'rgb(206, 212, 218)'
+        emailUsuario.value = ""
+        emailUsuarioConfirmar.style.borderColor = 'rgb(206, 212, 218)'
+        emailUsuarioConfirmar = ""
+        senhaUsuario.style.borderColor = 'rgb(206, 212, 218)'
+        senhaUsuario.value = ""
+        senhaUsuarioConfirmar.style.borderColor = 'rgb(206, 212, 218)'
+        senhaUsuarioConfirmar = ""
+    }
+           
+    
+    function cancelarInclusao(){
+        window.location.reload();
+    }
+                
+                

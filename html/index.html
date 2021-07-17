@@ -44,68 +44,71 @@
           <button class="btn pb-0"><i id="produtos_beleza" class="bi bi-brush fs-1 estilo" title="Produtos de Beleza"></i></button>
           <button class="btn pb-0"><i id="brinquedos" class="bi bi-star fs-1 estilo" title="Brinquegos"></i></button>
           <input type="text" id="text" class="text-start ms-4 fs-3 input-descricao"/>
-          <button type="button" class="btn-login" data-bs-toggle="modal" data-bs-target="#login"><i class="bi bi-person-circle fs-1 icon-login"></i></button>
-
-          <!-- Modal login -->
-          <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content" id="modal-content-login">
-                <div class="modal-header" id="modal-header-login">
-                  <h5 class="modal-title" id="modal-title-login">Login/Logout</h5>
-                </div>
-                <form action="#" method="GET">
-                  <div class="modal-body">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control" id="email" placeholder="usuario">
-                      <label for="floatingInput">Usuário cadastrado (email)<span class="text-danger"></span> *</label>
-                    </div>
-                    <div class="form-floating">
-                      <input type="password" class="form-control" id="senha" placeholder="Senha">
-                      <label for="floatingPassword">Digite a senha</label>
-                    </div>
-                    <p class="text-end mt-2 mb-0 nao-cadastrado">Não é cadastrado? Clique <a href="">aqui</a> e cadastre-se!</p>
-                    <div class="modal-footer" id="modal-footer-login">
-                      <button type='submit' class='btn btn-secondary' data-bs-dismiss='modal' id='cancelar'>Cancelar</button>
-                      <button type='submit' class='btn btn-primary btnLogin' id='btnLogin' data-bs-toggle='modal' data-bs-target='#login-confirmacao'>Login</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+          <div class="col-xl-2 text-center">
+            <a href="#section-login"><button type="button" class="btn-login" id="btn-login" onclick="secLogin()"><i class="bi bi-person-circle fs-1 icon-login"></i></button></a>
           </div>
-
-          <!-- modal confirmação login -->
-          <div class="modal fade" id="login-confirmacao" tabindex="-1" aria-labelledby="login" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content" id="modal-content-confirmacao-login">
-                <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modal-body-confirmacao-login">
-                
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-      
+      <!-- Modal login -->
+      <div class="modal fade" id="" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="modal-content-login">
+            <div class="modal-header" id="modal-header-login">
+              <h5 class="modal-title" id="modal-title-login">Login/Logout</h5>
+            </div>
+            <form action="#" method="GET">
+              <div class="modal-body">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" placeholder="usuario">
+                  <label for="floatingInput">Usuário cadastrado (email)<span class="text-danger"></span> *</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="senha" placeholder="Senha">
+                  <label for="floatingPassword">Digite a senha</label>
+                </div>
+                <p class="text-end mt-2 mb-0 nao-cadastrado">Não é cadastrado? Clique <a href="">aqui</a> e cadastre-se!</p>
+                <div class="modal-footer" id="modal-footer-login">
+                    <button type='submit' class='btn-sair' data-bs-dismiss='modal' id='sair'>Sair</button>
+                    <button type='submit' class='btn-cancelar' data-bs-dismiss='modal' id='cancelar'>Cancelar</button>
+                    <button type='submit' class='btn btnLogin' id='btn-entrar' data-bs-toggle='modal' data-bs-target='#login-confirmacao'>Entrar</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal confirmação login -->
+      <div class="modal fade" id="login-confirmacao" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="modal-content-confirmacao-login">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modal-body-confirmacao-login">
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- pesquisa -->
-      <div class="row d-flex mt-2">
+      <div class="row pesquisa">
         <div class="col-xl-6">
           <input type="text" class="inputPesquisar" placeholder="Pesquisar produtos" />
         </div>
         <div class="col-xl-2">
           <button class="btnPesquisar">Pesquisar</button>
         </div>
-        <div class="col-xl-2">
-          <a href="#" class="m-0">Conheça a <strong>MizP</strong></a>
+        <div class="col-xl-2 d-flex div-cesta">
+          <button class="btn-cesta m-0 p-0 "><i class="bi bi-basket3-fill fs-3 icon-cesta" title="Cesta de produtos"></i></button>
+          <input type="text" class="input-cesta" value="">
         </div>
         <div class="col-xl-2">
           <input type="text" class="nome-login" value="">
@@ -158,17 +161,18 @@
       </div>
     </div>
 
+    
     <hr>
 
     <!-- section mais vendidos -->
     <section>
-      <div class="row d-flex">
-        <div class="col-xl-12 d-flex">
-          <h3 id="mais-vendidos" class="mt-1">Os produtos mais vendidos</h3>
+      <div class="row">
+        <div class="col-xl-12">
+            <h3 id="mais-vendidos" class="mt-1">Os produtos mais vendidos</h3>
           <a href="#menu"><button class="btn-top align-middle"><i class="bi bi-arrow-up-circle-fill top"></i></button></a>
         </div>
       </div>
-        <div class="row section-mais-vendidos"></div>
+      <div class="row section-mais-vendidos"></div>
     </section>
 
     <hr>
@@ -177,6 +181,82 @@
     <h3 id="lancamentos" class="mt-1">Lançamentos</h3>
       <div class="row section-lancamentos"></div>
     </section>
-    
+
+    <hr>
+    <!-- section login -->
+    <div class="row">
+      <section class="col-xl-5" id="section-login">
+        <form class="login-form" action="#" method="GET">
+          <h3 id="login-descricao">Login</h3>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email-user" placeholder="usuario">
+            <label for="floatingInput">Usuário cadastrado (email)<span class="text-danger"></span> *</label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="senha-user" placeholder="Senha">
+            <label for="floatingPassword">Digite a senha</label>
+          </div>
+          <p class="text-end mt-2 mb-0 nao-cadastrado">Não é cadastrado? Clique <a href="#section-cadastro">aqui</a> e cadastre-se!</p>
+          <div class="footer-login" id="footer-login">
+              <button type='submit' class='btn-sair' id='sair' onclick="logOut()">Sair</button>
+              <button type='button' class='btn-cancelar' id='cancelar'>Cancelar</button>
+              <button type='submit' class='btn btnLogin' id='btn-entrar' onclick="window.location.reload()">Entrar</button>
+          </div>
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- section cadastro usuario -->
+      <div class="row mb-3">
+        <section class="ms-4" id="section-cadastro">
+          <h3 id="cadastro-descricao">Formulário de Cadastro de Usuário</h3>
+          <form class="cadastro-form" action="#" method="GET">
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="nome-user-cadastro" placeholder="nome" required>
+                  <label for="floatingInput">Nome<span class="text-danger"></span> *</label>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email-user-cadastro" placeholder="email" required>
+                  <label for="floatingInput">Email<span class="text-danger"></span> *</label>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="confirmar-email-user-cadastro" placeholder="confirmar email" required>
+                  <label for="floatingInput">Confirme o email<span class="text-danger"></span> *</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="senha-user-cadastro" placeholder="senha" required>
+                  <label for="floatingInput">Senha<span class="text-danger"></span> *</label>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="confirmar-senha-user-cadastro" placeholder="confirmar senha" required>
+                  <label for="floatingInput">Confirme a senha<span class="text-danger"></span> *</label>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <button type='submit' c lass='btn btnEntrar' id='btn-incluir' onclick="incluirUsuario()">Incluir</button>
+                <button type='submit' class='btn-cancelar-inclusao' id='btn-cancelar-inclusao'>Cancelar</button>
+              </div>
+            </div>
+          </form>
+        </section>  
+      </div>
+    </div>
   </body>
   </html>
