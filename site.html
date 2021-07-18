@@ -39,12 +39,12 @@
           </ul>
         </div>
         <div class="col-xl-6 p-0 d-flex">
-          <button class="btn pb-0"><i id="tecnologia" class="bi bi-gear-wide-connected fs-1 estilo" title="Tecnologia"></i></button>
-          <button class="btn pb-0"><i id="casa" class="bi bi-house-door fs-1 estilo" title="Casa"></i></button>
-          <button class="btn pb-0"><i id="ferramentas" class="bi bi-wrench fs-1 estilo" title="Ferramentas"></i></button>
-          <button class="btn pb-0"><i id="moda" class="bi bi-person-check fs-1 estilo" title="Moda"></i></button>
-          <button class="btn pb-0"><i id="produtos_beleza" class="bi bi-brush fs-1 estilo" title="Produtos de Beleza"></i></button>
-          <button class="btn pb-0"><i id="brinquedos" class="bi bi-star fs-1 estilo" title="Brinquegos"></i></button>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnTecnologia" value="Tecnologia" onmouseover="mostrarTecnologia()" onclick="carregarProdutos()"><i id="tecnologia" class="bi bi-gear-wide-connected fs-1 estilo" title="Tecnologia"></i></button></a>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnCasa" value="Casa" onmouseover="mostrarCasa()" onclick="carregarProdutos()"><i id="casa" class="bi bi-house-door fs-1 estilo" title="Casa"></i></button></a>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnFerramentas" value="Ferramentas" onmouseover="mostrarFerramentas()" onclick="carregarProdutos()"><i id="ferramentas" class="bi bi-wrench fs-1 estilo" title="Ferramentas"></i></button></a>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnModa" value="Moda" onmouseover="mostrarModa()" onclick="carregarProdutos()"><i id="moda" class="bi bi-person-check fs-1 estilo" title="Moda"></i></button></a>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnProdutosBeleza" value="Produtos de Beleza" onmouseover="mostrarProdutosBeleza()" onclick="carregarProdutos()"><i id="produtos_beleza" class="bi bi-brush fs-1 estilo" title="Produtos de Beleza"></i></button></a>
+          <a href="#tabela-produtos"><button class="btn pb-0 btnBrinquedos" value="Brinquedos" onmouseover="mostrarBrinquedos()" onclick="carregarProdutos()"><i id="brinquedos" class="bi bi-star fs-1 estilo" title="Brinquegos"></i></button></a>
           <input type="text" id="text" class="text-start ms-4 fs-3 input-descricao"/>
           <div class="col-xl-2 text-center">
             <button type="button" class="btn-login" id="btn-login" data-bs-toggle="modal" data-bs-target="#login-logout"><i class="bi bi-person-circle fs-1 icon-login" title="Clique aqui para fazer login no sistema!"></i></button>
@@ -221,8 +221,42 @@
     <h3 id="lancamentos" class="mt-1">Lançamentos</h3>
       <div class="row section-lancamentos"></div>
     </section>
-    </div>
+  </div>
 
+
+  <!-- mostrar produtos -->
+  <div class="container-fluid border-top border-success" id="tabela-produtos">
+    <div class="row">
+      <div class="col-xl-12 p-0 d-flex listaCategorias">
+        <button class="btn pb-0 btnTecnologia" value="Tecnologia" onmouseover="mostrarTecnologia()" onclick="carregarProdutos()"><i id="tecnologia" class="bi bi-gear-wide-connected fs-1 estilo" title="Tecnologia"></i></button>
+        <button class="btn pb-0 btnCasa" value="Casa" onmouseover="mostrarCasa()" onclick="carregarProdutos()"><i id="casa" class="bi bi-house-door fs-1 estilo" title="Casa"></i></button>
+        <button class="btn pb-0 btnFerramentas" value="Ferramentas" onmouseover="mostrarFerramentas()" onclick="carregarProdutos()"><i id="ferramentas" class="bi bi-wrench fs-1 estilo" title="Ferramentas"></i></button>
+        <button class="btn pb-0 btnModa" value="Moda" onmouseover="mostrarModa()" onclick="carregarProdutos()"><i id="moda" class="bi bi-person-check fs-1 estilo" title="Moda"></i></button>
+        <button class="btn pb-0 btnProdutosBeleza" value="Produtos de Beleza" onmouseover="mostrarProdutosBeleza()" onclick="carregarProdutos()"><i id="produtos_beleza" class="bi bi-brush fs-1 estilo" title="Produtos de Beleza"></i></button>
+        <button class="btn pb-0 btnBrinquedos" value="Brinquedos" onmouseover="mostrarBrinquedos()" onclick="carregarProdutos()"><i id="brinquedos" class="bi bi-star fs-1 estilo" title="Brinquegos"></i></button>
+      </div>
+      <div class="row">
+        <input class="input-categoria" type="text" value="">
+      </div>
+    </div>
+        <div class="row">
+          <div class="col-xl-12 lista-produtos">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Sub-Categoria</th>
+                  <th scope="col">Produto</th>
+                  <th scope="col">Preço</th>
+                  <th scope="col" title="Passe o mouse para aumentar a foto">Imagem</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody class="itens-tabela">  
+              </tbody>
+            </table> 
+          </div>
+        </div>
+      </div>
     <!-- footer -->
     <footer class="container-fluid border-top border-bottom border-success mb-4">
       <div class="row d-flex">
