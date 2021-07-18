@@ -16,7 +16,7 @@ function agradecimento(){
         A partir de agora você receberá em seu email,<br>
         informações sobre os nossos produtos e descontos exclusivos. 
         Aproveite</p>
-        <a href="/index.html"><button class="btn-site">Ir para Site</button></a>
+        <a href="/site.html"><button class="btn-site">Ir para Site</button></a>
     `
     usuariosCadastrados.push({
         nome: nomeLand.value,

@@ -117,7 +117,8 @@ lancamentos.forEach(produto =>{
     let nomeLogin = document.querySelector('.nome-login')
 
     let dadosUsuario = [
-        {nome:"Moises", email:"mopri08@gmail.com", senha:"123456"}
+        {nome:"Fulano", email:"fulano@gmail.com", senha:"123"},
+        {nome:"Ciclano", email:"ciclano@gmail.com", senha:"321"},
     ]
 
     function verificarDadosLogin (){
@@ -125,15 +126,10 @@ lancamentos.forEach(produto =>{
             if(email.value === user.email){
                 if(senha.value !== user.senha){
                     alert("Usuário não cadastrado ou senha inválida!")
-                    document.querySelector('.login-form').style.display = 'none'
                 }else{
                     alert("Olá "+user.nome)
-                    nomeLogin.value = "Olá, "+user.nome
-                    document.querySelector('.login-form').style.display = 'none'
+                    return nomeLogin.value = "Olá, "+user.nome
                 }
-            }else{
-                alert("Usuário não cadastrado ou senha inválida!")
-                document.querySelector('.login-form').style.display = 'none'
             }
         })
     }
@@ -148,6 +144,15 @@ lancamentos.forEach(produto =>{
         }
     }
 
+    /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Logout<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    function logOut(){
+        if(nomeLogin.value !== ""){
+            nomeLogin.value = ""
+            alert('Logout efetuado com sucesso!')
+        }else{
+            alert("Você não está logado!")
+        }
+    }
     /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add itens na cesta<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
     let contadorCesta = document.querySelector('.input-cesta')
     function incluirItensCesta(){
@@ -168,17 +173,38 @@ lancamentos.forEach(produto =>{
     let btnCancelarCadastro = document.getElementById('btn-cancelar-inclusao')
 
     function incluirUsuario(){
-        if(emailUsuario.value !== emailUsuarioConfirmar.value){
+        if(nomeUsuario.value === ""){
+            alert("Favor informar um nome de usuário!")
+            nomeUsuario.style.border = '2px solid rgb(255,0,0)'
+            nomeUsuario.focus()
+            limparCampos()
+
+        }
+        else if(emailUsuario.value === "" && emailUsuarioConfirmar.value === ""){
+            alert("Favor informar um email!")
+            emailUsuario.style.border = '2px solid rgb(255,0,0)'
             emailUsuario.focus()
-            emailUsuario.style.borderColor = 'rgb(255,0,0)'
-            emailUsuarioConfirmar.style.borderColor = 'rgb(255,0,0)'
+            limparCampos()
+
+        }else if(senhaUsuario.value === "" && senhaUsuarioConfirmar.value === ""){
+            alert("Favor informar uma senha!")
+            senhaUsuario.style.border = '2px solid rgb(255,0,0)'
+            senhaUsuario.focus()
+            limparCampos()
+
+        }else if(emailUsuario.value !== emailUsuarioConfirmar.value){
+            emailUsuario.focus()
+            emailUsuario.style.border = '2px solid rgb(255,0,0)'
+            emailUsuarioConfirmar.style.borderColor = '2px solid rgb(255,0,0)'
             alert("Os emails são diferentes")
+            limparCampos()
 
         }else if(senhaUsuario.value !== senhaUsuarioConfirmar.value){
             senhaUsuario.focus()
-            senhaUsuario.style.borderColor = 'rgb(255,0,0)'
+            senhaUsuario.style.border = 'rgb(255,0,0)'
             senhaUsuarioConfirmar.style.borderColor = 'rgb(255,0,0)'
             alert("As senhas são diferentes")
+            limparCampos()
         }else{
             dadosUsuario.push({
                 nome: nomeUsuario.value,
@@ -200,12 +226,5 @@ lancamentos.forEach(produto =>{
         senhaUsuario.style.borderColor = 'rgb(206, 212, 218)'
         senhaUsuario.value = ""
         senhaUsuarioConfirmar.style.borderColor = 'rgb(206, 212, 218)'
-        senhaUsuarioConfirmar = ""
-    }
-           
-    
-    function cancelarInclusao(){
-        window.location.reload();
-    }
-                
-                
+        senhaUsuarioConfirmar.value = ""
+    }        

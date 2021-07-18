@@ -13,6 +13,21 @@ body{
     /* font-family: 'Roboto','Courier New', Courier, monospace; */
 }
 
+.btn-site{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1.5%;
+    font-weight: 900;
+}
+
+.btn-site:hover{
+    color: chartreuse;
+    border: 2px solid chartreuse;
+    background-color: black;
+    transition: 1.5s;
+}
+
 .preco{
     margin-top: 10%;
     background: white;
@@ -30,30 +45,6 @@ body{
 }
 
 /* login */
-#login-descricao{
-    margin: 0% 0% 2% 0%;
-    text-align: center;
-}
-
-#login-descricao:hover{
-    background-color: transparent;
-    color: chartreuse;
-    border: 2px solid chartreuse;
-    border-radius: 10px;
-    padding: 2%;
-    text-align: center;
-    transition: 2s;
-}
-
-.login-form{
-    display: none;
-    margin-left: 18%;
-}
-
-.div-login-1{
-    margin-left: 16%;
-}
-
 .btn-login{
     background-color: transparent;
     border-color: transparent;
@@ -72,39 +63,38 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
+    color: white;
+}
+
+.aqui-login{
     color: chartreuse;
 }
 
-#sair{
-    margin-right: 239px;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-
-#cancelar{
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 2% 0% 5% 0%;
-}
-
-#btn-entrar{
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 1px 6px 1px 6px;
-}
-
-#sair:hover,
-#cancelar:hover,
-#btn-entrar:hover{
-    background-color: transparent;
+#modal-content-login{
+    background-color: black;
     border: 2px solid chartreuse;
-    color: white;
-    transition: 1.5s;
     border-radius: 10px;
 }
+
+#modal-title-login{
+    color: chartreuse;
+}
+
+#modal-content-cadastro-usuario{
+    background-color: black;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+}
+
+#motal-title-cadastro-usuario{
+    color: chartreuse;
+}
+
+#btn-cancelar-cadastro-usuario,
+#btn-incluir-usuario{
+    padding: 0.7%;
+}
+
 
 /* btn top */
 .btn-top{
@@ -409,4 +399,56 @@ nav{
     padding: 2%;
     text-align: center;
     transition: 2s;
+}
+
+/* footer */
+footer{
+    height: 350px;
+}
+.icon{
+    color: #6c757d;
+}
+
+.icon:hover{
+    color: chartreuse;
+}
+
+.div-pgto,
+.frete-gratis{
+    font-size: 1.0rem;
+    width: 80%;
+    text-align: center;
+    margin-left: 8%;
+}
+
+.pgto:hover,
+.frete-gratis-descricao:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#credicard:hover,
+#icon-frete:hover{
+    color: chartreuse;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.tipos-pgtos{
+    color: white;
+}
+
+.tipos-pgtos:hover{
+    color: chartreuse;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#fale-conosco,
+#midia-sociais,
+#formas-pagamento,
+#escolha-como-pagar,
+#frete,
+#frete-gratis{
+    color: chartreuse;
 }
