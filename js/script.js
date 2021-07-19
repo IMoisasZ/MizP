@@ -230,22 +230,7 @@ lancamentos.forEach(produto =>{
     }        
 
 
-    let subcategorias = [
-        {id: 0, categoria: "Tecnologia", subcategoria: "Celulares"},
-        {id: 1, categoria: "Tecnologia", subcategoria: "Notebooks"},
-        {id: 2, categoria: "Tecnologia", subcategoria: "Tablets"},
-        {id: 3, categoria: "Tecnologia", subcategoria: "Smart Whatches"},
-        {id: 4, categoria: "Casa", subcategoria: "Camas"},
-        {id: 5, categoria: "Casa", subcategoria: "Sofas"},
-        {id: 6, categoria: "Casa", subcategoria: "Mesas"},
-        {id: 7, categoria: "Ferramentas", subcategoria: "Caixa de Ferramentas"},
-        {id: 8, categoria: "Moda", subcategoria: "Vestidos"},
-        {id: 9, categoria: "Moda", subcategoria: "Blusas"},
-        {id: 10, categoria: "Moda", subcategoria: "Sapatos"},
-        {id: 11, categoria: "Produtos de Beleza", subcategoria: "Mascara Capilar"},
-        {id: 12, categoria: "Brinquedos", subcategoria: "Piscinas de Bolinha"},
-        {id: 13, categoria: "Brinquedos", subcategoria: "Pula Pula"},
-    ]    
+   /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>mostrar produtos<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
     
     let produtosSite = [
         // tecnologia
@@ -270,7 +255,18 @@ lancamentos.forEach(produto =>{
         // moda
         {id: 15, categoria: "Moda", subcategoria: "Vestidos", descricao: "Vestido Godê Rodado Midi Moda Evangélica", fabricante: "Puro Glamour", imagem: '/img/moda/vestidos/vestido_evangelica.jpg', preco: "R$ 99,00"},
         {id: 16, categoria: "Moda", subcategoria: "Sapatos", descricao: "Sapato Feminino Oxford Branco em Couro Salto Tratorado 19000", fabricante: "Oxford", imagem: '/img/moda/sapatos/sapato_oxford.jpg', preco: "R$ 159,99"},
-
+        // produtos de beleza
+        {id: 17, categoria: "Produtos de Beleza", subcategoria: "Mascara Capilar", descricao: "Máscara Capilar Match SOS Reconstrução, 250g", fabricante: "Match", imagem: '/img/produtos_beleza/mascara_capilar.png', preco: "R$ 57,90"},
+        {id: 18, categoria: "Produtos de Beleza", subcategoria: "Mascara Capilar", descricao: "Yenzah Cronograma Capilar 3 Em 1 - Máscara de Tratamento", fabricante: "Yenzah", imagem: '/img/produtos_beleza/mascara_capilar_1.jpg', preco: "R$ 19,80"},
+        {id: 19, categoria: "Produtos de Beleza", subcategoria: "Mascara Capilar", descricao: "Máscara Capilar Eico Tratamento Mandioca 500g", fabricante: "Ikesaki", imagem: '/img/produtos_beleza/mascara_capilar_2.png', preco: "R$ 19,90"},
+        {id: 20, categoria: "Produtos de Beleza", subcategoria: "Kit Maquiagem", descricao: "Kit 10 Pinceis Kabuki Para Maquiagem Preto Com Dourado", fabricante: "On Line", imagem: '/img/produtos_beleza/kit_maquiagem.jpg', preco: "R$ 31,20"},
+        {id: 21, categoria: "Produtos de Beleza", subcategoria: "Kit Maquiagem", descricao: "Glitter p/ pele em pó Color Make c/ 10 cores Yur BT 1 KT", fabricante: "Yur", imagem: '/img/produtos_beleza/kit_maquiagem_1.jpg', preco: "R$ 18,90"},
+        // brinquedos
+        {id: 22, categoria: "Brinquedos", subcategoria: "Pula Pula", descricao: "Cama Elástica 3,05m - Completa, Colorida e Importada", fabricante: "Lacuca brinquedos", imagem: '/img/brinquedos/pula_pula/pula_pula.jpg', preco: "R$ 1.599,00"},
+        {id: 23, categoria: "Brinquedos", subcategoria: "Pula Pula", descricao: "Pula Pula Inflável Infantil Com Cesta De Basquete Intex", fabricante: "Intex", imagem: '/img/brinquedos/pula_pula/pula_pula_1.jpg', preco: "R$ 649,99"},
+        {id: 24, categoria: "Brinquedos", subcategoria: "Piscina de Bolinha", descricao: "Piscina de Bolinhas Premium - Medidas 1,10m X 1,10m - Acompanha 500 Bolinhas TOP Coloridas", fabricante: "Lacuca Brinquedos", imagem: '/img/brinquedos/piscina_bolinha/piscina_bolinha.jpg', preco: "R$ 789,00"},
+        {id: 25, categoria: "Brinquedos", subcategoria: "Piscina de Bolinha", descricao: "Piscina de Bolinhas 3m com 5.000 Bolinhas 1,90 X 3,00(L) X 3,00 (A)", fabricante: "Lacuca Brinquedos", imagem: '/img/brinquedos/piscina_bolinha/piscina_bolinha_1.jpg', preco: "R$ 3.499,00"},
+        {id: 26, categoria: "Brinquedos", subcategoria: "Piscina de Bolinha", descricao: "Piscina De Bolinha + 200 Bolinhas + Piscina De Água 70 L", fabricante: "Company kids", imagem: '/img/brinquedos/piscina_bolinha/piscina_bolinha_2.jpg', preco: "R$ 399,49"},
 
     ]
 
