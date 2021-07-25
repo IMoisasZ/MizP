@@ -109,3 +109,6 @@ OBS.
     Abaixo há um link que diz que se não quer se cadastrar clique aqui e clicando irá para o site.
 
 ### Link para acessar o site pelo Netlify
+https://amazing-colden-b3b77c.netlify.app
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bc149074-d5ff-43c7-bdae-1b0b585e3805/deploy-status)](https://app.netlify.com/sites/amazing-colden-b3b77c/deploys)
