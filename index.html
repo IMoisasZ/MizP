@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MizP</title>
+        <!-- icon site -->
+        <link rel="sortcut icon" href="/img/logo/4767mipz.ico" type="image/x-icon" />;
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <!-- Javascript -->
+        <script defer src="/js/script.js"></script>
+        <script defer src="/js/script_landinpage.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/styles_landinpage.css">
+    </head>
+    <body>
+        <main class="container-fluid">
+            <div class="row d-flex" id="row-logo">
+                <div class="col-xl-12 text-center" id="div-col-logo">
+                    <img src="/img/logo/mipz.png" alt="logo mizp" id="logo">
+                </div>
+            </div>
+            <div class="card d-flex" id="div-card">
+                <div class="row" id="row-texto-form">
+                    <div class="col-xl-6" id="div-col-texto">
+                        <div class="texto" id="div-texto">
+                            <h5>Oi,</h5>
+                            <p>Você gostaria de receber promoções no seu email diáriamente?<br>
+                            Acho que sim ne!<br>
+                            Pois bem, é muito simples.<br>
+                            Cadastre-se colocando o seu nome e email no formulário ao lado e pronto.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6" id="div-col-form">
+                        <form action="#" method="post" id="form" class="mt-4">
+                            <div class="form-floating mb-3" id="div-nome">
+                                <input type="text" class="form-control" id="nome-land" placeholder="nome">
+                                <label for="floatingInput">Nome<span class="text-danger"></span> *</label>
+                            </div>
+                            <div class="form-floating" id="div-email">
+                                <input type="email" class="form-control" id="email-land" placeholder="email">
+                                <label for="floatingPassword">Email<span class="text text-danger"></span> *</label>
+                            </div>
+                            <div class="text-center">
+                                <button class="mt-2" id="gravar" type="button" onclick="agradecimento()">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <p class="mt-2 nao-cadastro">Não quer se cadastrar? Não tem problema, clique <a href="/site.html" class="aqui">aqui</a> e vá para o site!</p>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="col-xl-4 text-end" id="msg"></div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+  </body>
+</html>
