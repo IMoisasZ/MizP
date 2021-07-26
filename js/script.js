@@ -306,6 +306,9 @@ function incluirEndereco(){
     let nomeLogin = document.querySelector('.nome-login')
 
     function verificarDadosLogin (){
+        if(localStorage.getItem('cli') === null){
+            return alert("Cliente não cadastrado!")
+        }
         clienteJSON.forEach(cli =>{
             if(cli.emailCadastro === emailUser.value){
                 if(cli.senha !== senhaUser.value){
